@@ -1,0 +1,99 @@
+[
+    {
+        "image": "https://i.ibb.co/K58F83q/class-1.jpg",
+        "className": "Swimming",
+        "instructor": "Michael Davis",
+        "available_seats": 20,
+        "book_seats": 19,
+        "price": 15
+      },
+      {
+        "image": "https://i.ibb.co/4Pb64Dc/class-2.jpg",
+        "className": "Tennis",
+        "instructor": "Jane Smith",
+        "available_seats": 20,
+        "book_seats": 15,
+        "price": 20
+      },
+      {
+        "image": "https://i.ibb.co/PQgTy99/class-3.jpg",
+        "className": "Basketball",
+        "instructor": "Emily Johnson",
+        "available_seats": 15,
+        "book_seats": 15,
+        "price": 10
+      },
+      {
+        "image": "https://i.ibb.co/wJ7GKWV/class-4.jpg",
+        "className": "Football",
+        "instructor": "Sarah Davis",
+        "available_seats": 20,
+        "book_seats": 14,
+        "price": 18
+      },
+      {
+        "image": "https://i.ibb.co/f4bqb4P/class-5.jpg",
+        "className": "Badminton",
+        "instructor": "Michael Brown",
+        "available_seats": 15,
+        "book_seats": 15,
+        "price": 25
+      },
+      {
+        "image": "https://i.ibb.co/jfYQNJg/class-6.jpg",
+        "className": "Pilates",
+        "instructor": "Jennifer Anderson",
+        "available_seats": 15,
+        "book_seats": 10,
+        "price": 20
+      },
+      {
+        "image": "https://i.ibb.co/YXyH7zk/class-7.jpg",
+        "className": "Baseball",
+        "instructor": "Robert Wilson",
+        "available_seats": 15,
+        "book_seats": 11,
+        "price": 15
+      },
+      {
+        "image": "https://i.ibb.co/LdXyzws/class-8.jpg",
+        "className": "Volleyball",
+        "instructor": "Jessica Lee",
+        "available_seats": 20,
+        "book_seats": 17,
+        "price": 18
+      },
+      {
+        "image": "https://i.ibb.co/2hJsFzK/class-9.jpg",
+        "className": "Hockey",
+        "instructor": "John Doe",
+        "available_seats": 20,
+        "book_seats": 16,
+        "price": 30
+      },
+      {
+        "image": "https://i.ibb.co/d0JYh5M/class-10.jpg",
+        "className": "Yoga Sculpt",
+        "instructor": "Julia Smith",
+        "available_seats": 15,
+        "book_seats": 12,
+        "price": 20
+      },
+      {
+        "image": "https://i.ibb.co/gJXyjWb/class-11.jpg",
+        "className": "Handball",
+        "instructor": "Michael Johnson",
+        "available_seats": 20,
+        "book_seats": 20,
+        "price": 15
+      },
+      {
+        "image": "https://i.ibb.co/NYZbDv4/class-12.jpg",
+        "className": "Boxing",
+        "instructor": "David Taylor",
+        "available_seats": 20,
+        "book_seats": 13,
+        "price": 12
+      }
+      
+]

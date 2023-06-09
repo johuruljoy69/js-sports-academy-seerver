@@ -1,0 +1,88 @@
+[
+    {
+        "image": "https://i.ibb.co/nMvZYDK/instructor-1.jpg",
+        "name": "Michael Davis",
+        "email": "michael.davis@gmail.com",
+        "classesTaken": 9,
+        "classes": ["Volleyball", "Basketball"]
+    },
+    {
+        "image": "https://i.ibb.co/099tkDJ/instructor-12.jpg",
+        "name": "John Smith",
+        "email": "johnsmith@gmail.com",
+        "classesTaken": 5,
+        "classes": ["Swimming", "Tennis"]
+    },
+    {
+        "image": "https://i.ibb.co/xH7N7xB/instructor-2.jpg",
+        "name": "Emily Johnson",
+        "email": "emilyjohnson@gmail.com",
+        "classesTaken": 5,
+        "classes":["Basketball", "Soccer", "Volleyball"]
+    },
+
+    {
+        "image": "https://i.ibb.co/f2n5dSC/instructor-4.jpg",
+        "name": "Sarah Davis",
+        "email": "sarahdavis@gmail.com",
+        "classesTaken": 6,
+        "classes": ["Swimming", "Badminton"]
+    },
+    {
+        "image": "https://i.ibb.co/jzs4wMs/instructor-3.jpg",
+        "name": "Michael Brown",
+        "email": "michaelbrown@gmail.com",
+        "classesTaken": 3,
+        "classes": ["Cricket", "Basketball"]
+    },
+    {
+        "image": "https://i.ibb.co/tXMqQgv/instructor-6.jpg",
+        "name": "Jennifer Anderson",
+        "email": "jenniferanderson@gmail.com",
+        "classesTaken": 2,
+        "classes": ["Basketball"]
+    },
+    {
+        "image": "https://i.ibb.co/S0D9sRR/instructor-5.jpg",
+        "name": "Robert Wilson",
+        "email": "robertwilson@gmail.com",
+        "classesTaken": 2,
+        "classes": ["Soccer", "Volleyball"]
+    },
+    {
+        "image": "https://i.ibb.co/nQgMw3C/instructor-8.jpg",
+        "name": "Jessica Lee",
+        "email": "jessicalee@gmail.com",
+        "classesTaken": 6,
+        "classes": ["Tennis", "Badminton"]
+    },
+
+    {
+        "image": "https://i.ibb.co/rwsbd2m/instructor-9.jpg",
+        "name": "John Doe",
+        "email": "john.doe@gmail.com",
+        "classesTaken": 4,
+        "classes":["Swimming", "Cricket"]
+    },
+    {
+        "image": "https://i.ibb.co/BCJGDcp/instructor-10.jpg",
+        "name": "Julia Smith",
+        "email": "jane.smith@gmail.com",
+        "classesTaken": 2,
+        "classes": ["Swimming"]
+    },
+    {
+        "image": "https://i.ibb.co/cLFh3k5/instructor-11.jpg",
+        "name": "Michael Johnson",
+        "email": "michael.johnson@gmail.com",
+        "classesTaken": 3,
+        "classes": ["Soccer", "Baseball"]
+    },
+    {
+        "image": "https://i.ibb.co/L1NQ6xx/instructor-7.jpg",
+        "name": "David Taylor",
+        "email": "davidtaylor@gmail.com",
+        "classesTaken": 1,
+        "classes": ["Pilates"]
+    }
+]
