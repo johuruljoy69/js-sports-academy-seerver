@@ -29,6 +29,9 @@ async function run() {
     // await client.connect();
 
     const usersCollection = client.db("sportsAcademy").collection("users");
+    const instructorsCollection = client.db("sportsAcademy").collection("instructors");
+    const classesCollection = client.db("sportsAcademy").collection("classes")
+    const cartsCollection = client.db("sportsAcademy").collection("carts")
 
     // users related APIs
     app.get('/users', async (req, res) => {
@@ -47,6 +50,41 @@ async function run() {
       });
 
 
+    //   instructor related APIs
+    app.get('/instructors', async (req, res) => {
+        const result = await instructorsCollection.find().toArray();
+        res.send(result);
+    })
+
+    // Classes related APIs
+    app.get('/classes', async (req, res) => {
+        const result = await classesCollection.find().toArray();
+        res.send(result);
+    })
+
+
+    // carts collection
+    app.get('/carts', async (req, res) => {
+        const email = req.query.email;
+        if(!email){
+            res.send([])
+        }
+        const query = {email: email};
+        const result = await cartsCollection.find(query).toArray();
+        res.send(result);
+    })
+    app.post('/carts', async (req, res) => {
+        const item = req.body;
+        const result = await cartsCollection.insertOne(item);
+        res.send(result);
+    })
+
+    app.delete('/carts/:id', async (req, res) => {
+        const id = req.params.id;
+        const query = { _id: new ObjectId(id) };
+        const result = await cartsCollection.deleteOne(query);
+        res.send(result);
+      })
 
 
     // Send a ping to confirm a successful connection
