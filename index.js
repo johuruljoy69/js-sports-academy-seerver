@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
-require('dotenv').config()
+require('dotenv').config();
+const stripe = require('stripe')(process.env.PAYMENT_SECRET_KEY)
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
@@ -46,16 +47,16 @@ async function run() {
 
     const usersCollection = client.db("sportsAcademy").collection("users");
     const instructorsCollection = client.db("sportsAcademy").collection("instructors");
-    const classesCollection = client.db("sportsAcademy").collection("classes")
-    const cartsCollection = client.db("sportsAcademy").collection("carts")
+    const classesCollection = client.db("sportsAcademy").collection("classes");
+    const cartsCollection = client.db("sportsAcademy").collection("carts");
 
-    // jwt token
+    // jwt token API
     app.post('/jwt', (req, res) => {
       const user = req.body;
       const token = jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: '2h' })
       res.send({ token })
     })
-    // verify Admin
+    // verify Admin API
     const verifyAdmin = async (req, res, next) => {
       const email = req.decoded.email;
       const query = { email: email }
@@ -65,7 +66,7 @@ async function run() {
       }
       next();
     };
-    // Verify Instructor
+    // Verify Instructor API
     const verifyInstructor = async (req, res, next) => {
       const email = req.decoded.email;
       const query = { email: email }
@@ -86,7 +87,7 @@ async function run() {
       const result = await usersCollection.find().toArray();
       res.send(result);
     })
-    
+
     app.post('/users', async (req, res) => {
       const user = req.body;
       const query = { email: user.email }
