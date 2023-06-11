@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
-const stripe = require('stripe')(process.env.PAYMENT_SECRET_KEY)
+// const stripe = require('stripe')(process.env.PAYMENT_SECRET_KEY)
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
@@ -121,6 +121,17 @@ async function run() {
       res.send(result);
     });
 
+    app.get('/users/student/:email', async (req, res) => {
+      const email = req.params.email;
+      if (req.decoded.email !== email) {
+        res.send({ instructor: false })
+      }
+      const query = { email: email }
+      const user = await usersCollection.findOne(query);
+      const result = { student: user?.role === 'student' }
+      res.send(result);
+    });
+
     // Make a Admin or Instructor
     app.patch('/users/admin/:id', async (req, res) => {
       const id = req.params.id;
@@ -168,6 +179,11 @@ async function run() {
       res.send(result);
     })
 
+    app.post('/classes', async (req, res) => {
+      const classItem = req.body;
+      const result = await classesCollection.insertOne(classItem)
+      res.send(result);
+    })
 
     // carts collection
     app.get('/carts', verifyJWT, async (req, res) => {
