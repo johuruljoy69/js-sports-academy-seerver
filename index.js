@@ -179,7 +179,7 @@ async function run() {
       res.send(result);
     })
 
-    app.post('/classes', async (req, res) => {
+    app.post('/classes', verifyJWT, verifyInstructor, async (req, res) => {
       const classItem = req.body;
       const result = await classesCollection.insertOne(classItem)
       res.send(result);
