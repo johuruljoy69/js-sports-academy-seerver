@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
-require('dotenv').config();
 const stripe = require('stripe')(process.env.PAYMENT_SECRET_KEY);
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
@@ -90,7 +90,7 @@ async function run() {
       res.send(result);
     })
 
-    app.post('/users', async (req, res) => {
+    app.post('/users', verifyJWT, async (req, res) => {
       const user = req.body;
       const query = { email: user.email }
       const existingUser = await usersCollection.findOne(query);
@@ -123,7 +123,7 @@ async function run() {
       res.send(result);
     });
 
-    app.get('/users/student/:email', async (req, res) => {
+    app.get('/users/student/:email', verifyJWT, async (req, res) => {
       const email = req.params.email;
       if (req.decoded.email !== email) {
         res.send({ instructor: false })
@@ -177,13 +177,21 @@ async function run() {
 
     // Classes related APIs
     app.get('/classes', async (req, res) => {
-      const result = await classesCollection.find().toArray();
+      const query = {};
+      const options = {
+        sort : {"book_seats" : -1}
+      }
+      const result = await classesCollection.find(query, options).toArray();
       res.send(result);
-    })
+    });
 
     app.post('/classes', verifyJWT, verifyInstructor, async (req, res) => {
       const classItem = req.body;
-      const result = await classesCollection.insertOne(classItem)
+      // const newClass = {
+      //   classItem : classItem,
+      //   status : 'pending'
+      // }
+      const result = await classesCollection.insertOne(classItem);
       res.send(result);
     });
 
@@ -247,7 +255,17 @@ async function run() {
       const deleteResult = await cartsCollection.deleteMany(query)
 
       res.send({ insertResult, deleteResult });
-    })
+    });
+
+    app.post('/payments/:id', verifyJWT, async (req, res) => {
+      const payment = req.body;
+      const insertResult = await paymentCollection.insertOne(payment);
+
+      const query = { _id: { $in: payment.cartItems.filter(id => new ObjectId(id)) } }
+      const deleteResult = await cartsCollection.deleteOne(query)
+
+      res.send({ insertResult, deleteResult });
+    });
 
 
 
