@@ -1,98 +1,110 @@
 [
     {
         "image": "https://i.ibb.co/K58F83q/class-1.jpg",
-        "className": "Swimming",
+        "class_name": "Swimming",
         "instructor": "Michael Davis",
+        "email": "michael.davis@gmail.com",
         "available_seats": 20,
-        "book_seats": 19,
+        "enrolled_seats": 19,
         "price": 15
       },
       {
         "image": "https://i.ibb.co/4Pb64Dc/class-2.jpg",
-        "className": "Tennis",
+        "class_name": "Tennis",
         "instructor": "Jane Smith",
+        "email": "johnsmith@gmail.com",
         "available_seats": 20,
-        "book_seats": 15,
+        "enrolled_seats": 15,
         "price": 20
       },
       {
         "image": "https://i.ibb.co/PQgTy99/class-3.jpg",
-        "className": "Basketball",
+        "class_name": "Basketball",
         "instructor": "Emily Johnson",
+        "email": "emilyjohnson@gmail.com",
         "available_seats": 15,
-        "book_seats": 15,
+        "enrolled_seats": 15,
         "price": 10
       },
       {
         "image": "https://i.ibb.co/wJ7GKWV/class-4.jpg",
-        "className": "Football",
+        "class_name": "Football",
         "instructor": "Sarah Davis",
+        "email": "sarahdavis@gmail.com",
         "available_seats": 20,
-        "book_seats": 14,
+        "enrolled_seats": 14,
         "price": 18
       },
       {
         "image": "https://i.ibb.co/f4bqb4P/class-5.jpg",
-        "className": "Badminton",
+        "class_name": "Badminton",
         "instructor": "Michael Brown",
+        "email": "michaelbrown@gmail.com",
         "available_seats": 15,
-        "book_seats": 15,
+        "enrolled_seats": 15,
         "price": 25
       },
       {
         "image": "https://i.ibb.co/jfYQNJg/class-6.jpg",
-        "className": "Pilates",
+        "class_name": "Pilates",
         "instructor": "Jennifer Anderson",
+        "email": "jenniferanderson@gmail.com",
         "available_seats": 15,
-        "book_seats": 10,
+        "enrolled_seats": 10,
         "price": 20
       },
       {
         "image": "https://i.ibb.co/YXyH7zk/class-7.jpg",
-        "className": "Baseball",
+        "class_name": "Baseball",
         "instructor": "Robert Wilson",
+        "email": "robertwilson@gmail.com",
         "available_seats": 15,
-        "book_seats": 11,
+        "enrolled_seats": 11,
         "price": 15
       },
       {
         "image": "https://i.ibb.co/LdXyzws/class-8.jpg",
-        "className": "Volleyball",
+        "class_name": "Volleyball",
         "instructor": "Jessica Lee",
+        "email": "jessicalee@gmail.com",
         "available_seats": 20,
-        "book_seats": 17,
+        "enrolled_seats": 17,
         "price": 18
       },
       {
         "image": "https://i.ibb.co/2hJsFzK/class-9.jpg",
-        "className": "Hockey",
+        "class_name": "Hockey",
         "instructor": "John Doe",
+        "email": "john.doe@gmail.com",
         "available_seats": 20,
-        "book_seats": 16,
+        "enrolled_seats": 16,
         "price": 30
       },
       {
         "image": "https://i.ibb.co/d0JYh5M/class-10.jpg",
-        "className": "Yoga Sculpt",
+        "class_name": "Yoga Sculpt",
         "instructor": "Julia Smith",
+        "email": "jane.smith@gmail.com",
         "available_seats": 15,
-        "book_seats": 12,
+        "enrolled_seats": 12,
         "price": 20
       },
       {
         "image": "https://i.ibb.co/gJXyjWb/class-11.jpg",
-        "className": "Handball",
+        "class_name": "Handball",
         "instructor": "Michael Johnson",
+        "email": "michael.johnson@gmail.com",
         "available_seats": 20,
-        "book_seats": 20,
+        "enrolled_seats": 20,
         "price": 15
       },
       {
         "image": "https://i.ibb.co/NYZbDv4/class-12.jpg",
-        "className": "Boxing",
+        "class_name": "Boxing",
         "instructor": "David Taylor",
+        "email": "davidtaylor@gmail.com",
         "available_seats": 20,
-        "book_seats": 13,
+        "enrolled_seats": 13,
         "price": 12
       }
       
