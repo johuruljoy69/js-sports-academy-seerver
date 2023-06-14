@@ -183,6 +183,9 @@ async function run() {
     // Classes related APIs
     app.get('/classes', async (req, res) => {
       const query = {};
+      if (req.query?.email) {
+        query = { email: req.query.email }
+      }
       const options = {
         sort: { "enrolled_seats": -1 }
       }
@@ -292,7 +295,7 @@ async function run() {
       const result = await paymentCollection.find(query).toArray();
       res.send(result);
     });
-    
+
     app.post('/payments', verifyJWT, async (req, res) => {
       const payment = req.body;
       const insertResult = await paymentCollection.insertOne(payment);
