@@ -267,7 +267,7 @@ async function run() {
       console.log(payment);
       const insertResult = await paymentCollection.insertOne(payment);
 
-      const query = { _id: { $in: payment.cartItems.find(id => new ObjectId(id)) } }
+      const query = { _id: { $in: payment.cartItems.findOne(id => new ObjectId(id)) } }
       const deleteResult = await cartsCollection.deleteOne(query)
 
       res.send({ insertResult, deleteResult });
